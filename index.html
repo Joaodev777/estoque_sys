@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento de Entrega de Estoque</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-rlaPZChqH3MWf4PX9gyjCUxWgd9OHjfj+AM5uJDr+rR3FR0q23h26p4U6L6/k5h9guhL8JkEVCjbYI3eNW5/7Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .nav-link {
+            color: #ff9006;
+        }
+
+        .nav-link:hover {
+            color: #000;
+        }
+
+        @media print {
+            .printableArea,
+            .printableArea * {
+                visibility: visible;
+            }
+
+            img {
+                display: block;
+            }
+
+            body * {
+                color: black;
+            }
+        }
+
+        .btn-primary {
+            background-color: #ff9006;
+            border: #ff9006;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff9006;
+            border: #ff9006;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-30%);
+            rotate: 90deg;
+        }
+
+        .logo-container img {
+            width: 300px;
+            height: auto;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .mb-3 {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #ff9006;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff7c00;
+        }
+
+        .termoEntrega {
+            border: 2px solid #000;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav nav-tabs" id="myTabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="https://joaodev777.github.io/up/">Carta de Upgrade</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="sistema.html">Carta de Cobrança</a>
+        </li>
+    </ul>
+    <div class="container mt-5">
+        <h5 class="modal-title">Documento de Entrega de Estoque</h5>
+        <br>
+        <form action="#" method="post" id="entregaForm" >
+            <div class="mb-3">
+                <label for="itemSelect" class="form-label">Selecione os Itens</label>
+                <select multiple class="form-select" id="itemSelect" required style="height: 350px;">
+                    <option value="ROTEADOR HUAWEI WS5200 V2">ROTEADOR HUAWEI WS5200 V2</option>
+                    <option value="ROTEADOR HUAWEI WS5200 V2">ROTEADOR HUAWEI WS5200 V2</option>
+                    <option value="ROTEADOR HUAWEI WS5200 V2">ROTEADOR HUAWEI WS5200 V2</option>
+                    <hr>
+                    <option value="ONT TENDA AC1200">ONT TENDA AC1200</option>
+                    <option value="ONT TENDA AC1200">ONT TENDA AC1200</option>
+                    <option value="ONT TENDA AC1200">ONT TENDA AC1200</option>
+                    <option value="ONT TENDA AC1200">ONT TENDA AC1200</option>
+                    <hr>
+                    <option value="ONU FIBERHOME">ONU FIBERHOME</option>
+                    <option value="ONU FIBERHOME">ONU FIBERHOME</option>
+                    <option value="ONU FIBERHOME">ONU FIBERHOME</option>
+                    <hr>
+                    <option value="ONU FIBERHOME 1porta - grande">ONU FIBERHOME 1porta - grande</option>
+                    <option value="ONU FIBERHOME 1porta - grande">ONU FIBERHOME 1porta - grande</option>
+                    <option value="ONU FIBERHOME 1porta - grande">ONU FIBERHOME 1porta - grande</option>
+                    <hr>
+                    <option value="ONU FIBERHOME 2porta - grande">ONU FIBERHOME 2porta - grande</option>
+                    <option value="ONU FIBERHOME 2porta - grande">ONU FIBERHOME 2porta - grande</option>
+                    <option value="ONU FIBERHOME 2porta - grande">ONU FIBERHOME 2porta - grande</option>
+                    <hr>
+                    <option value="ONT TENDA AC1200">ONT TENDA AC1200</option>
+                    <option value="ONT TENDA AC1200">ONT TENDA AC1200</option>
+                    <option value="ONT TENDA AC1200">ONT TENDA AC1200</option>
+                    <hr>
+                    <option value="ROTEADOR TP-LINK fast">ROTEADOR TP-LINK fast</option>
+                    <option value="ROTEADOR TP-LINK fast">ROTEADOR TP-LINK fast</option>
+                    <option value="ROTEADOR TP-LINK fast">ROTEADOR TP-LINK fast</option>
+                    <hr>
+                    <option value="ONT TP-LINK XX230v">ONT TP-LINK XX230v</option>
+                    <option value="ONT TP-LINK XX230v">ONT TP-LINK XX230v</option>
+                    <option value="ONT TP-LINK XX230v">ONT TP-LINK XX230v</option>
+                    <hr>
+                    <option value="ONT SHEROLINE AX1500">ONT SHEROLINE AX1500</option>
+                    <option value="ONT SHEROLINE AX1500">ONT SHEROLINE AX1500</option>
+                    <option value="ONT SHEROLINE AX1500">ONT SHEROLINE AX1500</option>
+                    <hr>
+                    <option value="ONU UNIX">ONU UNIX</option>
+                    <option value="ONU UNIX">ONU UNIX</option>
+                    <option value="ONU UNIX">ONU UNIX</option>
+                    <hr>
+                    <option value="ONT HUAWEI  HG8245H">ONT HUAWEI  HG8245H</option>
+                    <option value="ONT HUAWEI  HG8245H">ONT HUAWEI  HG8245H</option>
+                    <option value="ONT HUAWEI  HG8245H">ONT HUAWEI  HG8245H</option>
+                    <hr>
+                    <option value="ONU HUAWEI">ONU HUAWEI</option>
+                    <option value="ONU HUAWEI">ONU HUAWEI</option>
+                    <option value="ONU HUAWEI">ONU HUAWEI</option>
+                    <hr>
+                    <option value="ONT ZTE">ONT ZTE</option>
+                    <option value="ONT ZTE">ONT ZTE</option>
+                    <option value="ONT ZTE">ONT ZTE</option>
+                    <hr>
+                    <option value="ROTEADOR MW301R MERCUSYS">ROTEADOR MW301R MERCUSYS</option>
+                    <option value="ROTEADOR MW301R MERCUSYS">ROTEADOR MW301R MERCUSYS</option>
+                    <hr>
+
+                </select>
+            </div>
+
+            
+            <div class="mb-3">
+                <label for="month" class="form-label">Nome do técnico</label>
+                <select class="form-select" style="background-color: rgb(255, 255, 255);" id="tecnicoName">
+                    <option value="Milton Soares">Milton Soares</option>
+                    <option value="Milton Neto">Milton Neto</option>
+                    <option value="Vitor">Vitor</option>
+                    <option value="Emanuel Luiz">Emanuel Luiz</option>
+                    <option value="Fernando César">Fernando César</option>
+                    <option value="Leandro Soares">Leandro Soares</option>
+                    <option value="Elizangelo Patrick">Elizangelo Patrick</option>
+                    <option value="Ryan">Ryan</option>
+                </select>
+            </div>
+            <button type="button" onclick="gerarEImprimirTermosEntrega()" class="btn btn-primary">Gerar e Imprimir Termos de Entrega</button>
+
+        </form>
+        <div class="printableArea mt-5">
+            <div class="termoEntrega container"></div>
+            <div class="workspace container"></div>
+
+        </div>
+    <script>
+        
+
+        function imprimirTermoEntrega(termo, destinatario) {
+            var printContents = termo.innerHTML;
+            var originalContents = document.body.innerHTML;
+    
+            document.body.innerHTML = printContents;
+    
+            window.print();
+    
+            document.body.innerHTML = originalContents;
+        }
+    
+
+        function gerarTermoEntrega(destinatario, items) {
+            var nomeDestinatario = destinatario.charAt(0).toUpperCase() + destinatario.slice(1);
+
+            // Termo de entrega
+            var termoEntrega = document.querySelector(".termoEntrega");
+            termoEntrega.innerHTML = `
+            <div style="font-family: 'Times New Roman', Times, serif; font-size: 18px;">
+                <br>
+                <br>
+                
+                <h2>Termo de Entrega de Equipamentos para ${nomeDestinatario}</h2>
+                <p>Você, ${nomeDestinatario}, confirma que recebeu os seguintes equipamentos:</p>
+                <ul>
+                    ${items.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+                <p>No dia ${new Date().toLocaleDateString()}.</p>
+            
+
+                <br>
+            
+                <p>
+                    Ao assinar este termo, você concorda que:
+                    <ul>
+                        <li>Caso os equipamentos não estejam registrados no sistema, você será responsável por eles.</li>
+                        <li>Em caso de falta de registro, o valor do(s) equipamento(s) não registrado(s) será deduzido do seu acerto.</li>
+                    </ul>
+                </p>
+            
+                <br>
+                <p>Data de Recebimento: ${new Date().toLocaleDateString()}</p>
+                <p>Assinatura do ${nomeDestinatario}: _________________________</p>
+                <br>
+                <p>Assinatura do supervisor Emanuel: _________________________</p>
+
+                <p>Este termo deve ser entregue ao estoquista João Guilherme para registro.</p>
+                
+            </div>
+            
+            `;
+
+            // Workspace
+            var workspace = document.querySelector(".workspace");
+            workspace.innerHTML = `
+            <div style="font-family: 'Times New Roman', Times, serif; font-size: 18px;">
+                <br>
+                <br>
+                
+                <h2>Termo de Entrega de Equipamentos para Emanuel Luiz</h2>
+                <p>Você, Emanuel Luiz Dutra, confirma que recebeu os seguintes equipamentos para ser repaçado ao tecnico <strong> ${nomeDestinatario} </strong>:</p>
+                <ul>
+                    ${items.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+                <p>No dia ${new Date().toLocaleDateString()}.</p>
+
+                <br>
+            
+                <p>
+                    Ao assinar este termo, atesto que:
+                    <ul>
+                        <li>Sou responsável pelos equipamentos listados, mesmo que não estejam registrados no sistema.</li>
+                        <li>Em situações de falta de registro, concordo que o valor correspondente ao(s) equipamento(s) não registrado(s) será deduzido do meu acerto.</li>
+                    </ul>
+                </p>
+
+
+                <br>
+                <p>Data de Recebimento: ${new Date().toLocaleDateString()}</p>
+                <p>Assinatura do supervisor Emanuel: _________________________</p>
+                <br>
+                <p>Assinatura do estoquista João Guilherme: _________________________</p>
+
+                <p>Este termo deve ser entregue ao estoquista João Guilherme para registro.</p>
+                
+            </div>
+            `;
+
+            // Imprimir o termo de entrega
+            imprimirTermoEntrega(termoEntrega);
+            imprimirTermoEntrega(workspace);
+        }
+    
+        function gerarEImprimirTermosEntrega() {
+            // Obter o nome do técnico do input
+            var nomeTecnico = document.getElementById("tecnicoName").value;
+        
+            // Validar se o nome do técnico foi fornecido
+            if (!nomeTecnico) {
+                alert("Por favor, insira o nome do técnico.");
+                return;
+            }
+        
+            // Obter os itens selecionados pelo técnico
+            var selectedItemsTecnico = Array.from(document.getElementById("itemSelect").selectedOptions)
+                .map(option => option.value);
+        
+            // Gerar e imprimir para o técnico usando o nome fornecido
+            gerarTermoEntrega(nomeTecnico, selectedItemsTecnico);
+        }
+        
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
