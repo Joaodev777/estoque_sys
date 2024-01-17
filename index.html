@@ -210,6 +210,12 @@
                     <option value="Elizangelo Patrick">Elizangelo Patrick</option>
                     <option value="Ryan">Ryan</option>
                 </select>
+
+                            <div class="mb-3">
+                <label for="observacao" class="form-label">Observação</label>
+                <textarea class="form-control" id="observacao" rows="3"></textarea>
+            </div>
+
             </div>
             <button type="button" onclick="gerarEImprimirTermosEntrega()" class="btn btn-primary">Gerar e Imprimir Termos de Entrega</button>
 
@@ -236,7 +242,9 @@
 
         function gerarTermoEntrega(destinatario, items) {
             var nomeDestinatario = destinatario.charAt(0).toUpperCase() + destinatario.slice(1);
-
+            var selectedItemsTecnico = Array.from(document.getElementById("itemSelect").selectedOptions)
+                .map(option => option.value);
+            var observacao = document.getElementById("observacao").value;
             // Termo de entrega
             var termoEntrega = document.querySelector(".termoEntrega");
             termoEntrega.innerHTML = `
@@ -330,7 +338,8 @@
                 .map(option => option.value);
         
             // Gerar e imprimir para o técnico usando o nome fornecido
-            gerarTermoEntrega(nomeTecnico, selectedItemsTecnico);
+          gerarTermoEntrega(nomeTecnico, selectedItemsTecnico, observacao);
+
         }
         
     </script>
