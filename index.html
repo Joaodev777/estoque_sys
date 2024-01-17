@@ -246,42 +246,44 @@
                 .map(option => option.value);
             var observacao = document.getElementById("observacao").value;
             // Termo de entrega
-            var termoEntrega = document.querySelector(".termoEntrega");
-            termoEntrega.innerHTML = `
-            <div style="font-family: 'Times New Roman', Times, serif; font-size: 18px;">
-                <br>
-                <br>
-                
-                <h2>Termo de Entrega de Equipamentos para ${nomeDestinatario}</h2>
-                <p>Você, ${nomeDestinatario}, confirma que recebeu os seguintes equipamentos:</p>
+              // Termo de entrega
+        var termoEntrega = document.querySelector(".termoEntrega");
+        termoEntrega.innerHTML = `
+        <div style="font-family: 'Times New Roman', Times, serif; font-size: 18px;">
+            <br>
+            <br>
+            
+            <h2>Termo de Entrega de Equipamentos para ${nomeDestinatario}</h2>
+            <p>Você, ${nomeDestinatario}, confirma que recebeu os seguintes equipamentos:</p>
+            <ul>
+                ${items.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            <p>No dia ${new Date().toLocaleDateString()}.</p>
+        
+            <br>
+        
+            <p>Observação: ${observacao || 'Nenhuma observação.'}</p>
+
+            <br>
+            <p>
+                Ao assinar este termo, você concorda que:
                 <ul>
-                    ${items.map(item => `<li>${item}</li>`).join('')}
+                    <li>Caso os equipamentos não estejam registrados no sistema, você será responsável por eles.</li>
+                    <li>Em caso de falta de registro, o valor do(s) equipamento(s) não registrado(s) será deduzido do seu acerto.</li>
                 </ul>
-                <p>No dia ${new Date().toLocaleDateString()}.</p>
-            
+            </p>
+        
+            <br>
+            <p>Data de Recebimento: ${new Date().toLocaleDateString()}</p>
+            <p>Assinatura do ${nomeDestinatario}: _________________________</p>
+            <br>
+            <p>Assinatura do supervisor Emanuel: _________________________</p>
 
-                <br>
+            <p>Este termo deve ser entregue ao estoquista João Guilherme para registro.</p>
             
-                <p>
-                    Ao assinar este termo, você concorda que:
-                    <ul>
-                        <li>Caso os equipamentos não estejam registrados no sistema, você será responsável por eles.</li>
-                        <li>Em caso de falta de registro, o valor do(s) equipamento(s) não registrado(s) será deduzido do seu acerto.</li>
-                    </ul>
-                </p>
-            
-                <br>
-                <p>Data de Recebimento: ${new Date().toLocaleDateString()}</p>
-                <p>Assinatura do ${nomeDestinatario}: _________________________</p>
-                <br>
-                <p>Assinatura do supervisor Emanuel: _________________________</p>
-
-                <p>Este termo deve ser entregue ao estoquista João Guilherme para registro.</p>
-                
-            </div>
-            
-            `;
-
+        </div>
+        
+        `;
             // Workspace
             var workspace = document.querySelector(".workspace");
             workspace.innerHTML = `
@@ -297,6 +299,7 @@
                 <p>No dia ${new Date().toLocaleDateString()}.</p>
 
                 <br>
+                 <p>Observação: ${observacao || 'Nenhuma observação.'}</p>
             
                 <p>
                     Ao assinar este termo, atesto que:
